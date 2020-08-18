@@ -179,7 +179,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/sqa-hodor-cmd.github.io/2020/08/18/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95%E7%9A%84%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0%EF%BC%88%E6%95%B0%E5%BD%92%EF%BC%89Exce1.1.25/" class="post-title-link" itemprop="url">欧几里得算法的自然语言描述（数归）Exce1.1.25</a>
+            <a href="/sqa-hodor-cmd.github.io/2020/08/18/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95%E7%9A%84%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0%EF%BC%88%E6%95%B0%E5%BD%92%EF%BC%89Exce1.1.25/" class="post-title-link" itemprop="url">Exce1.1.25 欧几里得算法的证明</a>
         </h2>
 
         <div class="post-meta">
@@ -188,8 +188,18 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-08-18 21:27:03" itemprop="dateCreated datePublished" datetime="2020-08-18T21:27:03+08:00">2020-08-18</time>
+              <time title="创建时间：2020-08-18 21:27:03 / 修改时间：21:33:24" itemprop="dateCreated datePublished" datetime="2020-08-18T21:27:03+08:00">2020-08-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/sqa-hodor-cmd.github.io/categories/java%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">java学习</span></a>
+                </span>
             </span>
 
           
@@ -203,26 +213,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="欧几里得算法的自然语言描述（数归）Exce1-1-25"><a href="#欧几里得算法的自然语言描述（数归）Exce1-1-25" class="headerlink" title="欧几里得算法的自然语言描述（数归）Exce1.1.25"></a>欧几里得算法的自然语言描述（数归）Exce1.1.25</h1><p>计算两个非负整数p和q的最大公约数：</p>
-<p>若q是0，则最大公约数为p。否则将p除以q得到余数r，p和q的最大公约数即为q和r的最大公约数。</p>
-<h1 id="数学归纳法证明"><a href="#数学归纳法证明" class="headerlink" title="数学归纳法证明"></a>数学归纳法证明</h1><h2 id="基础步骤："><a href="#基础步骤：" class="headerlink" title="基础步骤："></a>基础步骤：</h2><p>若q = 0，则 gcd(p, q) = gcd(p, 0) = p。</p>
-<h2 id="归纳步骤："><a href="#归纳步骤：" class="headerlink" title="归纳步骤："></a>归纳步骤：</h2><p>令 p = a * q + r， 其中 p、a、q、r 均为非负整数。</p>
-<p>设 d 整除 p 和 q， 则 d 可以整除 p - a * q = r，即 p / d = a*q / d + r / d 。</p>
-<p>此时， d 为 p，q 的公约数，且 d 为 q，r 的公约数，即 p 和 q 的公约数 = q 和 r 的公约数 = d 。</p>
-<p>也即 gcd(p, q) = gcd(q, r) , 其中 r 为 p 除以 q 的余数。</p>
-<p>不断归纳，直至函数 gcd 的第二个参数为0，此时得到基础步骤。</p>
-<p>此时我们已经证明了最终的结果是 p 和 q 的一个约数。</p>
-<p>然而这还没完，因为我们只证明了最终结果是一个公约数，但没有证明它是最大的公约数。</p>
-<p>因为 d 整除 p 和 q，可得 d 整除 p - a * q = r, 因此 p 和 q 的任意约数也为 q 和 r 的约数；</p>
-<p>同理，d整除 q 和 r， 可得 d 整除 a * q + r = p， 因此q 和 r 的任意约数也为 p 和 q 的约数。</p>
-<p>综上，p 和 q 的约数集等于 q 和 r 的约数集。</p>
-<p>接下来由递推法：</p>
-<p>假定当函数gcd()的第二个参数为0时，第一个参数为m，可得 p 和 q 的约数集与 m 和 0 的约数集相同。</p>
-<p>由数学归纳法的基础情况知， 而 m 和 0 的最大公约数为 m， 即 m 和 0 的约数集的最大值为 m，</p>
-<p>由此可得 p 和 q 的约数集的最大值也为 m 。</p>
-<p>综上，欧几里得算法得证。</p>
-<p>献上Java代码：</p>
-
+          <p>这是自己一个月内的Java学习笔记，来自尚学堂</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/sqa-hodor-cmd.github.io/2020/08/18/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95%E7%9A%84%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0%EF%BC%88%E6%95%B0%E5%BD%92%EF%BC%89Exce1.1.25/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
